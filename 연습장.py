@@ -1,4 +1,2 @@
-print(ord('A'))
-print(ord('B'))
-print(ord('C'))
-print(ord('1'))
+print(ord('a')-ord('a'))
+print(ord('a')-ord('b'))
