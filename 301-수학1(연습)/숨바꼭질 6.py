@@ -7,7 +7,7 @@ n, s = map(int, input().split())
 n_posi = list(map(int, input().split()))
 
 # 수빈이 - 각 동생들 거리차 계산
-distances = [abs(n - x) for x in n_posi]
+distances = [abs(s - x) for x in n_posi]
 
 # 첫 번째 거리를 초기 GCD 값으로 설정
 gcd_val = distances[0]
