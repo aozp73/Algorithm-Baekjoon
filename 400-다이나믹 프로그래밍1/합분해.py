@@ -1,4 +1,6 @@
 N, K = map(int,input().split())
+
+# dp[i][j] : i까지의 정수 j개를 더해서 그 합이 i가 되는 경우의 수
 dp = [[0] * (K+1) for _ in range(N+1)]
 dp[0][0] = 1
 
