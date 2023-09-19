@@ -22,17 +22,15 @@ def dfs(x, y, mysum, depth):
             ny = y + dy[i]
             if nx < 0 or nx >= n or ny < 0 or ny >= m or visited[nx][ny]:
                 continue
-            
+
+            if depth == 1:  # ㅗ 모양은 DFS로 만들 수 없으므로 예외처리
+                visited[nx][ny] = True
+                dfs(x, y, mysum + board[nx][ny], depth + 1)
+                visited[nx][ny] = False
+
             visited[nx][ny] = True
             dfs(nx, ny, mysum + board[nx][ny], depth + 1)
             visited[nx][ny] = False
-
-            # if depth == 1:  # ㅗ 모양은 DFS로 만들 수 없으므로 예외처리
-            #     visited[nx][ny] = True
-            #     dfs(x, y, mysum + board[nx][ny], depth + 1)
-            #     visited[nx][ny] = False
-
-
 
 for i in range(n):
     for j in range(m):
