@@ -1,1 +1,1 @@
-print(ord('A'))
+print(range(4))
