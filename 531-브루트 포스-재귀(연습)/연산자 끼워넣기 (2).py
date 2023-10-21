@@ -7,6 +7,7 @@ max_val = -1e9
 
 def dfs(i, now):
     global min_val, max_val, add, sub, mul, div
+    
     if i == N:
         min_val = min(min_val, now)
         max_val = max(max_val, now)
